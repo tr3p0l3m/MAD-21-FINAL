@@ -1,20 +1,57 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Welcome,</ion-card-subtitle>
+      <ion-card-title>Matia</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      We are thrilled to have you use this service. We would be glad if you
+      shared your experience with your friends and family. Compel them to download out app.
+      Safe travel!
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item>
+      <ion-icon name="warning-outline"></ion-icon>
+      <ion-label>&nbsp;Travel Information</ion-label>
+      <ion-button fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      Please ensure you take care of your personal belongings. We track your every movement
+      for your safety! Ensure you are polite and act responsibly as you are using a public service.
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card (click)="openpayments()">
+    <ion-card-content>
+        <ion-icon name="card-outline" slot="start"></ion-icon>
+        <ion-label>&nbsp;&nbsp;Pay TroTro/Taxi</ion-label>
+    </ion-card-content>
+  </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <ion-card (click)="opentransfers()">
+    <ion-card-content>
+        <ion-icon name="share-outline" slot="start"></ion-icon>
+        <ion-label>&nbsp;&nbsp;Tranfer Trocredits</ion-label>
+    </ion-card-content>
+  </ion-card>
+    
+
+  <ion-card (click)="openbook()">
+    <ion-card-content>
+        <ion-icon name="car-sport-outline" slot="start"></ion-icon>
+        <ion-label>&nbsp;&nbsp;Book a car</ion-label>
+    </ion-card-content>
+  </ion-card>
+

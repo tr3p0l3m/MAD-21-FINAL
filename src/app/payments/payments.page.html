@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>payments</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header *ngFor="let i of newd">
+      <ion-card-subtitle>Ticket Price (GHC)</ion-card-subtitle>
+      <ion-card-title id="price" [(ngModel)]="price"> {{i.fare}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      This is the amount to be paid at the end of your trip!
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item>
+      <ion-icon name="alert-outline" slot="start"></ion-icon>
+      <ion-label>information</ion-label>
+      <ion-button fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      Please enter trip information in the feild below. The trip fair will be calculated based on what information
+      put into the feilds.
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>  
+    <ion-item >
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>Your current Location</ion-label>
+      <ion-input type="text" [(ngModel)]="Clocation" ></ion-input>
+    </ion-item>
+  
+    <ion-item >
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>Your destination</ion-label>
+      <ion-input type="text" [(ngModel)]="Dlocation"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-icon name="car-sport-outline" slot="start"></ion-icon>
+      <ion-label>TaxiID</ion-label>
+      <ion-input type="text" [(ngModel)]="TaxiID" (click)="getTripData()"></ion-input>
+    </ion-item>
+
+
+      <ion-button expand="full" (click)="postPayment()">MAKE PAYMENT</ion-button>
+
+

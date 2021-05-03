@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Transfers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Credit Balance</ion-card-subtitle>
+      <ion-card-title>$500</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      This is the amount of trotro credits in your wallet. Only you can see this.
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item>
+      <ion-icon name="alert-outline" slot="start"></ion-icon>
+      <ion-label>information</ion-label>
+      <ion-button fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      Please enter tranfer information in the feild below
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>  
+    <ion-item >
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+  
+    <ion-item >
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>Phonenumber</ion-label>
+      <ion-input type="text" [(ngModel)]="phone"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-icon name="car-sport-outline" slot="start"></ion-icon>
+      <ion-label>Credits to transfer:</ion-label>
+      <ion-input type="text" [(ngModel)]="transferamt"></ion-input>
+    </ion-item>
+
+
+      <ion-button expand="full" (click)="postTransfer()">MAKE PAYMENT</ion-button>
+
+

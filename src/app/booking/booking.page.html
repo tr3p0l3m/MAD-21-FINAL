@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>booking</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header (click)="clicker()" *ngFor="let transport of transports">
+      <ion-icon name="car-sport-outline" slot="end"></ion-icon>
+      <ion-label [(ngModel)]="ttype" id="transtype">{{transport.transportType}}</ion-label>
+      <ion-card-subtitle >{{transport.transportImg}}</ion-card-subtitle>
+      <ion-card-subtitle>{{transport.availability}}</ion-card-subtitle>
+      <ion-card-subtitle [(ngModel)]="tprice" id="transprice">{{transport.price}}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
